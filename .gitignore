@@ -176,6 +176,9 @@ TSWLatexianTemp*
 # Kile
 *.backup
 
+# Archives
+*.tgz
+
 # KBibTeX
 *~[0-9]*
 /.project
