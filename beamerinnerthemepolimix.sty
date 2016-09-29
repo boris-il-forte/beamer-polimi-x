@@ -49,12 +49,14 @@
     \vskip0.1cm%
     \ifx\insertsupervisor\relax\relax\else
     \begin{beamercolorbox}[sep=3pt,center,ht=,#1]{author}
-          \usebeamerfont{author}\supervisortitle:~\insertsupervisor
+          \usebeamerfont{author}\supervisortitle:~\insertsupervisor%
     \end{beamercolorbox}\fi
+    %
     \ifx\insertcoadvisor\relax\relax\else
     \begin{beamercolorbox}[sep=3pt,center,ht=,#1]{author}
-          \usebeamerfont{author}\coadvisortitle:~\insertcoadvisor
+          \usebeamerfont{author}\coadvisortitle:~\insertcoadvisor%
     \end{beamercolorbox}\fi
+    %
     \begin{beamercolorbox}[wd=12cm,center,#1]{date}
       \usebeamerfont{author}\insertdate%
     \end{beamercolorbox}
