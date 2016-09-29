@@ -1,0 +1,54 @@
+\mode<presentation>
+
+% Requirement
+%\RequirePackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\RequirePackage{tikz}
+\usepackage{ifthen}
+\PassOptionsToPackage{usenames,dvipsnames,svgnames,table}{xcolor}
+\usefonttheme[onlymath]{serif}
+
+\definecolor{poliblue1}{cmyk}{.4, .1, .1, .40} % PANTONE 5425 C
+\definecolor{poliblue2}{cmyk}{.54, .28, .22, .2} % PANTONE 5425 U
+\definecolor{poliblue3}{cmyk}{.6, .34, .0, .68} %RGB(33,54,82)
+\graphicspath{{./logo/}}
+
+%supervisor command
+\let\insertsupervisor\relax
+\newcommand\supervisortitle[2]{\def\insertsupervisortitle{#1, #2}}
+\newcommand\supervisor[2]{\def\insertsupervisor{#1: #2}}
+\newcommand\coadvisortitle[2]{\def\insertcoadvisortitle{#1, #2}}
+\newcommand\coadvisor[2]{\def\insertcoadvisor{#1: #2}}
+
+% Settings
+\useinnertheme{polimix}
+\useoutertheme{polimix}
+\usecolortheme{polimix}
+
+\setbeamertemplate{navigation symbols}{} 
+
+% Items
+
+\setbeamertemplate{items}[square]
+\setbeamertemplate{itemize subitem}[circle]
+
+% \setbeamertemplate{itemize item}{\tiny$\blacksquare$}
+% \setbeamertemplate{itemize subitem}{$\bullet$}
+\setbeamertemplate{itemize subsubitem}{$-$}
+% 
+% \setbeamertemplate{enumerate item}{\insertenumlabel.}
+% \setbeamertemplate{enumerate subitem}{\insertsubenumlabel.}
+% \setbeamertemplate{enumerate subsubitem}{\insertsubsubenumlabel.}
+
+
+\setbeamertemplate{sections/subsections in toc}[square]
+
+% Transparency
+\setbeamercovered{transparent}
+
+% Beamer bug workaround: only rounded blocks are centered, so use them instead
+% of square blocks.
+\setbeamertemplate{blocks}[rounded][shadow=true] 
+
+%%%% All settings %%%%
+
+\mode<all>

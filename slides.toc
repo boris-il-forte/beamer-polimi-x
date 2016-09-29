@@ -1,0 +1,4 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Section A}{3}{0}{1}
+\beamer@sectionintoc {2}{Section B}{4}{0}{2}
+\beamer@sectionintoc {3}{Section C}{8}{0}{3}

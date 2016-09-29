@@ -1,0 +1,160 @@
+\documentclass[c]{beamer}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+
+\usepackage{enumerate}
+\usepackage{multimedia}
+
+\usetheme{polimix}
+ 
+\title[Short title]{Long title}
+\subtitle{subtitle}
+
+\author[author]{author}
+\supervisor{Supervisor}{supervisor name}
+\coadvisor{Co-Advisor}{co advisor name}
+\date[31/04/1995]{31 Febbraio 1955}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\addtocounter{framenumber}{-1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Sommario}
+\tableofcontents
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Section A}
+
+\begin{frame}
+\frametitle{Title A1}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id ex ornare, gravida nisi in, ornare risus. Aenean eu posuere purus. Curabitur molestie consequat eleifend. Ut imperdiet at risus quis suscipit. Suspendisse ligula ligula, euismod in vestibulum non, lobortis a dolor. Mauris varius risus eu tristique pretium. Nullam placerat, ligula id mollis sagittis, diam leo interdum sapien, nec molestie enim leo et felis. Etiam maximus convallis libero, ac venenatis nunc sagittis nec. Proin nunc justo, iaculis eu dui ut, suscipit fermentum nisl. Donec bibendum tellus in diam posuere finibus. Donec sed luctus leo. Nulla eget interdum dolor. Suspendisse orci ex, pharetra vitae aliquam ac, rutrum in dui.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Section B}
+
+\begin{frame}
+\frametitle{Title B1}
+
+\begin{itemize}
+\addtolength{\itemsep}{.2cm}
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+\item Nulla id ex ornare, gravida nisi in, ornare risus.
+  \begin{itemize}
+    \addtolength{\itemsep}{.1cm}
+  \item[1.] Aenean eu posuere purus.
+  \item[2.] Etiam maximus convallis libero, ac venenatis nunc sagittis nec.
+  \end{itemize}
+\item Suspendisse orci ex, pharetra vitae aliquam ac, rutrum in dui.
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Title B2}
+
+\begin{theorem}[Th. Name]
+\label{thlabel} This is a theorem
+\begin{itemize}
+\item Property 1;
+\item Property 2.
+\end{itemize}
+\end{theorem}
+
+\pause
+
+\textit{Proof. }
+\begin{align}
+    a + b & = c \\
+    a & = c - b \\
+    answer & = 42
+\end{align}
+\qed
+
+\pause
+
+\begin{proof}
+Another proof style.
+\end{proof}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Section C}
+
+\begin{frame}
+\frametitle{Title C1}
+
+\begin{columns}[t, onlytextwidth]
+\column{.33\textwidth}
+First column.\\
+\onslide<3>{\bigskip Appears with third column}
+\pause{}
+\column{.33\textwidth}
+Second column.
+\pause
+\column{.33\textwidth}
+Third column.
+\end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Title C2}
+
+
+\centering
+Image:\\
+\bigskip\bigskip
+\includegraphics[height=2cm]{gfx/logo-polimi}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Title C3}
+
+
+\begin{enumerate}
+ \item lorem
+ \item Ipsus
+ \begin{enumerate}
+    \item sub1
+    \item sub3
+    \begin{enumerate}
+      \item sub4
+      \item sub5
+    \end{enumerate}
+ \end{enumerate}
+\end{enumerate}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Video}
+\movie[width=\textwidth, height = 0.8\paperheight, poster, autostart, borderwidth=1pt]{}{video/test.mp4} 
+
+\end{frame}
+
+
+\end{document} 

@@ -1,0 +1,55 @@
+\mode<presentation>
+
+% Frame title
+\defbeamertemplate*{frametitle}{polimithb}[1][]
+{
+\vspace*{-0.04cm}%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.8cm]{frametitle} 
+  \begin{tikzpicture}
+	\useasboundingbox[fill=white](0,0) rectangle(\the\paperwidth,0.8);
+% 	\fill[poliblue3] (0,0) rectangle (\the\paperwidth,0.8);
+	\fill[poliblue1] (0,0) rectangle (0.15,0.8);
+	\fill[poliblue1] (.9\paperwidth,0.65) rectangle (\the\paperwidth,0.8);
+	\node[anchor=west, poliblue3, font=\tiny] at (.925\paperwidth,0.5) {\insertframenumber};
+	\draw[poliblue3,opacity=0.8,line width=0.4pt] (0,0) -- (\the\paperwidth,0);
+% 	\draw[poliblue2,opacity=0.8,line width=0.3pt] (0,0.3pt) -- (\the\paperwidth,0.3pt);
+	\ifx\insertframesubtitle\@empty%
+	    {\node[anchor= west, poliblue3, font=\large] at (.5,0.38){\insertframetitle};}
+	\else%
+	    {\node[anchor= west, poliblue3, font=\large] at (.5,0.53){\insertframetitle};%
+	     \node[anchor= west, poliblue3, font=\small] at (.5,0.16){\normalfont\scriptsize\insertframesubtitle};}%
+	\fi
+	\node[anchor=west,white,font=\tiny] at (.9\paperwidth,0.91) {\insertframenumber};
+  \end{tikzpicture}
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{footline}{
+  \leavevmode\hbox{%
+  \begin{beamercolorbox}[wd=.6\paperwidth, ht=.4cm, left]{foottitle}
+    \ifnum\thepage>1
+      \begin{tikzpicture}
+	  \useasboundingbox[fill=poliblue2] (0,0) rectangle(.6\paperwidth,0.4);
+	  \draw[poliblue3,opacity=0.8,line width=0.4pt] (0,0.4) -- (.6\paperwidth,0.4);
+	  \draw[draw=none] (0,0) rectangle (.6\paperwidth,.4)
+	    node[inner sep=0pt, outer sep=0pt, anchor=west,pos=0.5,xshift=-3cm, white] {\insertshortauthor \hspace*{.5cm} \insertshorttitle};
+      \end{tikzpicture}
+    \fi
+  \end{beamercolorbox}% 
+  \begin{beamercolorbox}[wd=.4\paperwidth, ht=.4cm, left]{footlogo}
+  \ifnum\thepage>1
+  \begin{tikzpicture}
+    \useasboundingbox[fill=poliblue2!80] (0,0) rectangle(.4\paperwidth,0.4);
+    \draw[poliblue3,opacity=0.8,line width=0.4pt] (0,0.4) -- (.4\paperwidth,0.4);
+    \draw[draw=none,fill=white] (0,0) rectangle (.05,0.4);
+    \draw[draw=none,fill=poliblue3!70] (0.3,0.4) rectangle (.5\paperwidth,0.44);
+%     \draw[draw=none] (0,0) rectangle (\the\paperwidth,.7)
+%       node[pos=0.5,xshift=-4.5cm] {\includegraphics[height=.55cm,page=1]{./logo/polimitestobiancolato.pdf}};
+    \draw[draw=none] (0,0) rectangle (.4\paperwidth,.4)
+      node[pos=0.5,xshift=0.5cm] {\color{white} POLITECNICO DI MILANO 1863};
+  \end{tikzpicture}
+  \fi
+  \end{beamercolorbox}
+}}
+
+\mode<all>

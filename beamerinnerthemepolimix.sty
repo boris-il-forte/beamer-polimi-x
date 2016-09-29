@@ -1,0 +1,64 @@
+\mode<presentation>
+
+\newcommand{\transparent}[1]{}
+% \setbeamertemplate{background}{
+%   \begin{tikzpicture}
+% 	\pgfmathsetmacro\titheight{.74\paperheight}
+% 	\coordinate (bottomtitleright) at (\the\paperwidth,.73\paperheight);
+% 	\useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+% 	\draw[draw=none] (0,0) rectangle (bottomtitleright)
+% 			node[pos=0.5]{\includegraphics[width=\paperwidth]{./style_img/20090504_Politecnico_0006_02.jpg}};
+% 	\fill[color=poliblue3] (0,\the\paperwidth) rectangle (bottomtitleright);
+% 	\draw[draw=none] (0,\the\paperwidth) rectangle (\the\paperwidth,4)
+% 			node[pos=0.5]{\includegraphics[width=2.5cm]{./style_img/polimilogotestobianco.pdf}};
+% 	\node[inner sep=0,outer sep=0,anchor=south west] at (0,.73\paperheight) 
+% 			{\includegraphics[width=\paperwidth]{./style_img/deco_stripes_vert_nobkg_white.pdf}};
+% 	\ifnum\thepage>1\relax%
+% 	\fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+% 	\fi
+%   \end{tikzpicture}
+% }
+\setbeamertemplate{background}{
+	\begin{tikzpicture}
+	\useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+	\draw[draw=none] (0,\the\paperwidth) rectangle (\the\paperwidth,0.2\paperheight)
+			      node[pos=0.5]{\includegraphics[width=\paperwidth]{./style_img/20090504_Politecnico_0006_02.jpg}};
+	% 			node[pos=0.5]{\includegraphics[width=\paperwidth]{./style_img/20090511_Politecnico_3190_01.jpg}};
+	\fill[color=poliblue3] (0,0) rectangle (\the\paperwidth,.45\paperheight);
+	\draw[draw=none] (0,.52\paperwidth) rectangle (\the\paperwidth,.45\paperheight)
+			      node[pos=0.5]{\includegraphics[width=2.5cm]{./style_img/polimilogotestobianco.pdf}};
+	\node[inner sep=0,outer sep=0,anchor=north west] at (0,.45\paperheight) {\includegraphics[width=\paperwidth]{./style_img/deco_stripes_vert_nobkg_white.pdf}};
+	\ifnum\thepage>1\relax%
+		\fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+	\fi
+	\end{tikzpicture}
+}
+
+
+% Title page
+\defbeamertemplate*{title page}{polimithx}[1][]
+{ 
+   \vskip5.5cm%
+    \begin{beamercolorbox}[wd=12cm,center,sep=8pt,#1]{title page header}
+      \usebeamerfont{title}\inserttitle\par%
+    \end{beamercolorbox}%
+    \vskip0.2cm%
+    \begin{beamercolorbox}[wd=12cm,center,#1]{author}
+      \usebeamerfont{author}\insertauthor%
+    \end{beamercolorbox}
+    \vskip0.1cm%
+    \ifx\insertsupervisor\relax\relax\else
+    \begin{beamercolorbox}[sep=3pt,center,ht=,#1]{author}
+          \usebeamerfont{author}\supervisortitle:~\insertsupervisor
+    \end{beamercolorbox}\fi
+    \ifx\insertcoadvisor\relax\relax\else
+    \begin{beamercolorbox}[sep=3pt,center,ht=,#1]{author}
+          \usebeamerfont{author}\coadvisortitle:~\insertcoadvisor
+    \end{beamercolorbox}\fi
+    \begin{beamercolorbox}[wd=12cm,center,#1]{date}
+      \usebeamerfont{author}\insertdate%
+    \end{beamercolorbox}
+  \vfill
+}
+
+\mode<all>
