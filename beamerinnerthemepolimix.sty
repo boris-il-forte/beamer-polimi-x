@@ -25,6 +25,9 @@
    \vskip5.5cm%
     \begin{beamercolorbox}[wd=12cm,center,sep=8pt,#1]{title page header}
       \usebeamerfont{title}\inserttitle\par%
+      \ifx\insertsubtitle\relax\relax\else
+      \vskip0.1cm%
+      \usebeamerfont{subtitle}\insertsubtitle\par\fi%
     \end{beamercolorbox}%
     \vskip0.2cm%
     \begin{beamercolorbox}[wd=12cm,center,#1]{author}
