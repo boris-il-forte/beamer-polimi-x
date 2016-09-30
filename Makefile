@@ -21,7 +21,7 @@ copystyle: $(style_files)
 	@cp $^ $(root_dir)/$(style_dir)/$(package_name)
 
 copyimg: $(image_dir)
-	@cp -r  $(image_dir) $(root_dir)/$(style_dir)/$(package_name)/$(image_dir)
+	@cp -r  $(image_dir) $(root_dir)/$(style_dir)/$(package_name)/
 
 hash:
 	@echo "rebuilding texlive hash"
